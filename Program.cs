@@ -23,6 +23,7 @@ Console.Clear();
 int numSticks = 20;
 string player1 = "Player 1"; /*I don't know how to change players from 1 to 2*/
 string player2 = "Player 2"; /*I don't know how to change players from 1 to 2*/
+string currentPlayer = player1;
 int maxSticks = 3;
 int minSticks = 1;
 
@@ -31,7 +32,7 @@ while (numSticks > 0)
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine($"{numSticks} sticks remaining");
     
-    Console.Write("Player 1, how many sticks would you like to take? ");
+    Console.Write($"{currentPlayer}, how many sticks would you like to take? ");
     int sticksTaken = Convert.ToInt32(Console.ReadLine());
 
     if (maxSticks > numSticks)
@@ -58,7 +59,4 @@ while (numSticks > 0)
     }
 };
 
-Console.WriteLine(@"
---------------
-Player 1 wins!
---------------"); /*I don't know how to change the player, so this is the best that I could do*/
+Console.WriteLine($"{currentPlayer} wins!!!"); /*I don't know how to change the player, so this is the best that I could do*/
